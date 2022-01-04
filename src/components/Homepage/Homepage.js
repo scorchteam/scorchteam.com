@@ -1,7 +1,8 @@
+import "./Homepage.scss";
 
 const Homepage = () => {
     return (
-        <div>Homepage</div>
+        <div className="homepage-container">Homepage</div>
     );
 }
 

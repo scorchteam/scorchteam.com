@@ -1,5 +1,101 @@
+@import "../../Colors.scss";
+
 header {
-    height: 100px;
+    height: 5rem;
     width: 100%;
-    background-color: blue;
+    background-color: var(--pallette-space-cadet);
+}
+
+.header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    height: 100%;
+    width: 100%;
+
+    .header-left-section, .header-middle-section {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .header-left-section {
+        justify-content: center;
+
+        .header-logo {
+            height: 3.25rem;
+        }
+    }
+
+    .header-middle-section {
+        width: 100%;
+        justify-content: end;
+        padding-right: 1rem;
+        gap: 1rem;
+        /* font */
+        color: white;
+        font-weight: bold;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+
+        .navigation-link {
+            transition: all 0.2s;
+            text-decoration: none;
+            color: var(--pallette-misty-rose);
+        }
+
+        .navigation-link:hover {
+            cursor: pointer;
+            color: var(--pallette-electric-blue);
+        }
+
+        .navigation-link::after {
+            content: '';
+            display: block;
+            width: 1ch;
+            height: 2px;
+            transition: width .2s;
+            background-color: var(--pallette-electric-blue);
+        }
+    
+        .navigation-link:hover::after {
+            width: 100%;
+        }
+    
+        .navigation-link.active::after {
+            width: 100%;
+        }
+
+        .active-nav {
+            color: var(--pallette-electric-blue);
+        }
+
+        .active-nav::after {
+            width: 100%;
+        }
+
+        .github-link {
+            margin-top: 0.2rem;
+            background-color: var(--pallette-misty-rose);
+            border-radius: 0.5rem;
+            padding: 0.3rem 0.7rem;
+            text-decoration: none;
+            color: var(--pallette-space-cadet);
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+
+            i {
+                margin-top: 0.15rem;
+            }
+        }
+
+        .github-link:hover {
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
+            color: var(--pallette-electric-blue);
+            background-color: var(--pallette-space-cadet);
+        }
+
+    }
 }
