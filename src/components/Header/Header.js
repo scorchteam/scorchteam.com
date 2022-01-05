@@ -40,6 +40,10 @@ const Header = (props) => {
         return navLinks;
     }
 
+    const isVisible = () => {
+        return (width < 768 && !collapsed);
+    }
+
     return (
         <div className="header-container">
             <header>
@@ -70,9 +74,9 @@ const Header = (props) => {
             <div className="header-bottom-section-container">
                 <animated.div
                     style={useSpring({
-                        opacity: collapsed ? 1 : 0,
-                        y: collapsed ? 0 : -24,
-                        height: collapsed ? 184 : 0,
+                        opacity: isVisible() ? 1 : 0,
+                        y: isVisible() ? 0 : -24,
+                        height: isVisible() ? 233 : 0,
                         config: {
                             duration: 300
                         }
@@ -80,13 +84,10 @@ const Header = (props) => {
                     <div className={`header-bottom-section`}>
 
                         {renderNavLinks()}
-
-                        {/* {
-                    !collapsed &&
-                    width < 768 &&
-                    <div>fucky</div>
-                    // FadeIn(!collapsed, renderNavLinks())
-                } */}
+                        <a href="https://www.github.com/scorchteam" className="github-link">
+                            <i className="fab fa-github"></i>
+                            GitHub
+                        </a>
                     </div>
                 </animated.div>
             </div>
