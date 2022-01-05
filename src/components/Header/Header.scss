@@ -1,7 +1,7 @@
 @import "../../Colors.scss";
 
 header {
-    height: 5rem;
+    height: 6rem;
     width: 100%;
     background-color: var(--pallette-space-cadet);
 }
@@ -30,7 +30,7 @@ header {
     .header-middle-section {
         width: 100%;
         justify-content: end;
-        padding-right: 1rem;
+        // padding-right: 1rem;
         gap: 1rem;
         /* font */
         color: white;
@@ -38,64 +38,129 @@ header {
         font-size: 1.5rem;
         text-transform: uppercase;
 
-        .navigation-link {
-            transition: all 0.2s;
-            text-decoration: none;
-            color: var(--pallette-misty-rose);
-        }
-
-        .navigation-link:hover {
-            cursor: pointer;
-            color: var(--pallette-electric-blue);
-        }
-
-        .navigation-link::after {
-            content: '';
-            display: block;
-            width: 1ch;
-            height: 2px;
-            transition: width .2s;
-            background-color: var(--pallette-electric-blue);
-        }
-    
-        .navigation-link:hover::after {
-            width: 100%;
-        }
-    
-        .navigation-link.active::after {
-            width: 100%;
-        }
-
-        .active-nav {
-            color: var(--pallette-electric-blue);
-        }
-
-        .active-nav::after {
-            width: 100%;
-        }
-
-        .github-link {
-            margin-top: 0.2rem;
-            background-color: var(--pallette-misty-rose);
-            border-radius: 0.5rem;
-            padding: 0.3rem 0.7rem;
-            text-decoration: none;
-            color: var(--pallette-space-cadet);
-            display: flex;
-            align-items: center;
-            gap: 0.25rem;
-
-            i {
-                margin-top: 0.15rem;
-            }
-        }
-
-        .github-link:hover {
+        .hamburger-icon {
+            font-size: 2.75rem;
+            color: var(--pallette-indian-red);
             transition: all 0.2s ease-in-out;
-            cursor: pointer;
-            color: var(--pallette-electric-blue);
-            background-color: var(--pallette-space-cadet);
         }
+
+        .hamburger-icon:hover {
+            color: var(--pallette-electric-blue);
+            cursor: pointer;
+        }
+        
 
     }
+
+    
+}
+
+.navigation-link {
+    transition: all 0.2s;
+    text-decoration: none;
+    color: var(--pallette-indian-red);
+    user-select: none;
+}
+
+.navigation-link:hover {
+    cursor: pointer;
+    color: var(--pallette-electric-blue);
+}
+
+.navigation-link::after {
+    content: '';
+    display: block;
+    width: 1ch;
+    height: 2px;
+    transition: width .2s;
+    background-color: var(--pallette-electric-blue);
+}
+
+.navigation-link:hover::after {
+    width: 100%;
+}
+
+.navigation-link.active::after {
+    width: 100%;
+}
+
+.active-nav {
+    color: var(--pallette-electric-blue);
+}
+
+.active-nav::after {
+    width: 100%;
+}
+
+.github-link {
+    margin-top: 0.2rem;
+    background-color: var(--pallette-indian-red);
+    border-radius: 0.5rem;
+    padding: 0.3rem 0.7rem;
+    text-decoration: none;
+    color: var(--pallette-space-cadet);
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+
+    i {
+        margin-top: 0.15rem;
+    }
+}
+
+.github-link:hover {
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    color: var(--pallette-indian-red);
+    background-color: var(--pallette-misty-rose);
+}
+
+.header-bottom-section {
+    background-color: var(--pallette-space-cadet);
+    padding: 0 1rem 2rem 1rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    // animation: lineInserted 5s;
+    // transition: height 5s;
+}
+
+.header-bottom-section-container {
+    background-color: var(--pallette-space-cadet);
+    z-index: -1;
+}
+
+.header-bottom-fade-in {
+    padding: 0 1rem 2rem 1rem;
+    animation: fadeInAnimation 2s;
+}
+
+.header-bottom-fade-out {
+    padding: 0;
+    animation: fadeOutAnimation 2s;
+}
+
+.header-nav-links {
+    animation: fadeInAnimation 5s;
+    // animation: lineInserted 5s;
+    // transition: height 5s;
+}
+
+@keyframes lineInserted {
+    from {
+        height: 0;
+    }
+    to {
+        height: auto; /* your line height here */
+    }
+}
+
+@keyframes fadeInAnimation {
+    from { scale: 0; }
+    to   { scale: 1; }
+}
+
+@keyframes fadeOutAnimation {
+    from { opacity: 1; }
+    to   { opacity: 0; }
 }

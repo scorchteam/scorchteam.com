@@ -1,7 +1,10 @@
+@import "./Colors.scss";
+
 body, html {
   margin: 0;
   height: 100vh;
   overflow: overlay;
+  background-color: var(--pallette-misty-rose);
 }
 
 #root {
