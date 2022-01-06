@@ -129,6 +129,7 @@ header {
 .header-bottom-section-container {
     background-color: var(--pallette-space-cadet);
     z-index: -1;
+    overflow: hidden;
 }
 
 .header-bottom-fade-in {

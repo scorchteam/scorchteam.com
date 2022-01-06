@@ -74,11 +74,11 @@ const Header = (props) => {
             <div className="header-bottom-section-container">
                 <animated.div
                     style={useSpring({
-                        opacity: isVisible() ? 1 : 0,
-                        y: isVisible() ? 0 : -24,
+                        // opacity: isVisible() ? 1 : 0,
+                        y: isVisible() ? 0 : -233,
                         height: isVisible() ? 233 : 0,
                         config: {
-                            duration: 300
+                            duration: 250
                         }
                     })}>
                     <div className={`header-bottom-section`}>
