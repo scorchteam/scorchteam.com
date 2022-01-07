@@ -79,23 +79,6 @@
     }
 }
 
-.project-cards {
-    display: grid;
-    grid-template-columns: repeat( auto-fit, minmax(10px, 400px) );
-    gap: 3rem;
-    justify-content: center;
-    width: 100%;
-    max-width: 1500px;
-    margin-top: 2rem;
-    padding: 1rem;
-}
-
-@media screen and (max-width: 894px) {
-    .project-cards {
-        grid-template-columns: repeat( auto-fit, minmax(10px, 600px) );
-    }
-}
-
 .homepage-section-3 {
     background-color: var(--pallette-space-cadet);
 

@@ -1,10 +1,18 @@
 import ProjectCard from "./components/ProjectCard/ProjectCard";
+import ProjectCards from "./components/ProjectCard/ProjectCards";
 import "./Homepage.scss";
-import amplystPic from "../../images/amplyst.PNG";
-import scorchteamPic from "../../images/scorchteam.PNG";
-import wumpusPic from "../../images/wumpusworld.png";
 
-const Homepage = () => {
+const Homepage = (props) => {
+
+    const getRecentProjects = (projects) => {
+        //get recent projects object
+        var recentProjectsObjs = [];
+        projects.recentKeys.forEach((projectName) => {
+            recentProjectsObjs.push(projects.projects[`${projectName}`]);
+        })
+        return recentProjectsObjs;
+    }
+
     return (
         <div className="homepage-container">
             <div className="homepage-section-1 wave-container">
@@ -18,56 +26,9 @@ const Homepage = () => {
                 <h5>Check out what we've been up to</h5>
                 <a href="/projects" className="view-all-projects-button"><p>View all projects</p><i className="fas fa-long-arrow-alt-right"></i></a>
                 <div className="project-cards">
-                    <ProjectCard
-                        backgroundColor="#33333b"
-                        textColor="#c4a0ff"
-                        title="Amplyst"
-                        description="A modern approach to building lists"
-                        showcaseImage={amplystPic}
-                        showcaseImageDescription="Screenshot of Amplyst.com"
-                        sourceLink="https://www.github.com/scorchteam/amplyst"
-                        sourceLinkText="View the Source Code"
-                        projectLink="https://www.amplyst.com"
-                        projectLinkText="View it in Action"
-                        teamMembers={["Nicholas Prussen", "Timothy Poehlman"]} />
-                    <ProjectCard
-                        backgroundColor="#DB5461"
-                        textColor="#171738"
-                        title="scorchteam.com"
-                        description="A center for passion projects created by the Scorch Team"
-                        showcaseImage={scorchteamPic}
-                        showcaseImageDescription="Screenshot of scorchteam.com"
-                        sourceLink="https://www.github.com/scorchteam/scorchteam.com"
-                        sourceLinkText="View the Source Code"
-                        projectLink="#"
-                        projectLinkText="You're already here!"
-                        teamMembers={["Nicholas Prussen"]} />
-                    <ProjectCard
-                        backgroundColor="#99ae4e"
-                        textColor="#171738"
-                        title="Wumpus World App"
-                        description="Nicholas Prussen's CS121 final project converted into an Android App"
-                        showcaseImage={wumpusPic}
-                        showcaseImageDescription="Screenshot of Wumpus World App"
-                        sourceLink="https://www.github.com/scorchteam/com.scorchgames.wumpusworld"
-                        sourceLinkText="View the Source Code"
-                        projectLink="https://play.google.com/store/apps/details?id=com.scorchgames.wumpusworldapp"
-                        projectLinkText="View on the Google Play Store"
-                        teamMembers={["Nicholas Prussen"]} />
-                    {/* <ProjectCard
-                        backgroundColor="#33333b"
-                        textColor="#c4a0ff"
-                        title="Amplyst"
-                        description="A modern approach to building lists"
-                        showcaseImage={amplystPic}
-                        showcaseImageDescription="Screenshot of Amplyst.com"
-                        sourceLink="https://www.github.com/scorchteam/amplyst"
-                        sourceLinkText="View the Source Code"
-                        projectLink="https://www.amplyst.com"
-                        projectLinkText="View it in Action"
-                        teamMembers={["Nicholas Prussen", "Timothy Poehlman"]} /> */}
-                </div>
-                
+                    <ProjectCards
+                        projects={getRecentProjects(props.projects)} />
+                </div>  
             </div>
         </div>
     );

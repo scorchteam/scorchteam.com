@@ -1,3 +1,13 @@
 .projects-section {
     background-color: var(--pallette-misty-rose);
 }
+
+.projects-container {
+    width: 100%;
+}
+
+.project-cards-container {
+    background-color: var(--pallette-misty-rose);
+    display: flex;
+    justify-content: center;
+}
