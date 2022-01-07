@@ -30,4 +30,10 @@ footer {
 
 .footer-container {
     background-color: var(--pallette-misty-rose);
+    overflow: hidden;
+}
+
+.footer-wave-container {
+    width: 100vw;
+    transform: translateY(1px) translateX(-1px) scaleX(1.1);
 }
