@@ -1,4 +1,3 @@
-import ProjectCard from "./components/ProjectCard/ProjectCard";
 import ProjectCards from "./components/ProjectCard/ProjectCards";
 import "./Homepage.scss";
 
