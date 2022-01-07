@@ -29,7 +29,8 @@ header {
 
     .header-middle-section {
         width: 100%;
-        justify-content: end;
+        margin-left: auto;
+        justify-content: flex-end;
         // padding-right: 1rem;
         gap: 1rem;
         /* font */
