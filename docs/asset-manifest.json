@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ecb5c7f1.css",
+    "main.js": "/static/js/main.c6003a52.js",
+    "static/media/amplyst.PNG": "/static/media/amplyst.f8b176eb56b468e5568e.PNG",
+    "static/media/wumpusworld.png": "/static/media/wumpusworld.470f6d17ae3fbc05f5ce.png",
+    "static/media/scorchteam.PNG": "/static/media/scorchteam.3d5e0bae01698d860d4d.PNG",
+    "static/media/scorchteam_logo.svg": "/static/media/scorchteam_logo.f565bc746ea7dee2836887827b8f1c1c.svg",
+    "index.html": "/index.html",
+    "main.ecb5c7f1.css.map": "/static/css/main.ecb5c7f1.css.map",
+    "main.c6003a52.js.map": "/static/js/main.c6003a52.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ecb5c7f1.css",
+    "static/js/main.c6003a52.js"
+  ]
+}
